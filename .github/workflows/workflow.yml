@@ -1,5 +1,5 @@
 name: My workflow
-on: [pull_request]
+on: [push]
 # grouping jobs
 jobs:
 # job to run cypress
