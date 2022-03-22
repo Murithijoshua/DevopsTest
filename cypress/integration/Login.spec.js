@@ -7,7 +7,8 @@ before(()=>{
     cy
         .request('POST','/register',{email:"joshua@gmail.com",password:"1234"})
 })
-describe("Logging in a new user",()=>{
+// test suite
+describe("Logging in a new user",()=>{ 
   it("Clicking",()=>{
     cy
       .get('[data-cy="login-menu"]')
