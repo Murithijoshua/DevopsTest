@@ -29,7 +29,6 @@ jobs:
       shell: bash
       run: |
         sudo mkdir testing
-        sudo touch testing/testing.txt
         
     - name: deploy-to-server
       id: deploy
@@ -40,5 +39,5 @@ jobs:
         flags: '-avzr --delete'
         options: ''
         ssh_options: '-p ${{secrets.PORT}}'
-        src: 'testing'
+        src: '~/testing'
         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
