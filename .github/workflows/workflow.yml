@@ -28,7 +28,7 @@ jobs:
     - name: Prepare Directory
       shell: bash
       run: |
-        ls
+        mkdir testing && touch testing/testing.txt
     - name: deploy-to-server
       id: deploy
       uses: Pendect/action-rsyncer@v1.1.0
@@ -38,5 +38,5 @@ jobs:
         flags: '-avzr --delete'
         options: ''
         ssh_options: '-p ${{secrets.PORT}}'
-        src: 'public/'
+        src: 'testing'
         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
