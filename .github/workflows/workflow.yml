@@ -18,4 +18,20 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
             start: npm start
-            wait-on: "http://localhost:3000"   
+            wait-on: "http://localhost:3000"
+
+  deploy-to-server:
+    runs-on: ubuntu-latest
+    needs:  cypress-run
+    steps:
+    - name: deploy-to-server
+      id: deploy
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+      with:
+        flags: '-avzr --delete'
+        options: ''
+        ssh_options: '-p ${{secrets.PORT}}'
+        src: 'public/'
+        dest: '{{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}'
