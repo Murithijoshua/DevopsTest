@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: npm install  --force or --legacy-peer-deps
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
             start: npm start
             wait-on: "http://localhost:3000"
