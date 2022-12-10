@@ -38,8 +38,8 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.KEY}}
       with:
-        flags: '-avzr --delete'
-        options: '-O'
+        flags: '-avzr --delete --no-o --no-g'
+        options: ''
         ssh_options: '-p ${{secrets.PORT}}'
         src: 'assets/'
         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
