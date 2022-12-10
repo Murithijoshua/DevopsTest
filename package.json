@@ -43,5 +43,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "or": "^0.2.0"
+  }
 }

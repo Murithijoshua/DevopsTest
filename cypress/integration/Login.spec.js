@@ -18,7 +18,7 @@ describe("Logging in a new user",()=>{
         .type("joshua@gmail.com")
     cy
         .get('[data-cy="login-password"]')
-        .type('124{enter}')
+        .type('1234{enter}')
     cy
         .get('[data-cy="logged-user"]')
         .should('contain.text','joshua@gmail.com')
