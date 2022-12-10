@@ -39,7 +39,7 @@ jobs:
         DEPLOY_KEY: ${{secrets.KEY}}
       with:
         flags: '-avzr --delete'
-        options: '--exclude-from=.rsyncexclude --delete-excluded'
+        options: ''
         ssh_options: '-p ${{secrets.PORT}}'
         src: .
         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
