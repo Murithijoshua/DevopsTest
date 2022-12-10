@@ -35,4 +35,4 @@ jobs:
         options: ''
         ssh_options: '-p ${{secrets.PORT}}'
         src: 'public/'
-        dest: '{{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}'
+        dest: '{{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
