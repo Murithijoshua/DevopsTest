@@ -28,7 +28,7 @@ jobs:
     - name: Prepare Directory
       shell: bash
       run: |
-        mkdir testing && touch testing/testing.txt
+        sudo mkdir testing && touch testing/testing.txt
     - name: deploy-to-server
       id: deploy
       uses: Pendect/action-rsyncer@v1.1.0
