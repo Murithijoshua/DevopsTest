@@ -1,7 +1,7 @@
-FROM node:lts-alpine as build-stage
+FROM node:14
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --force
+RUN npm install 
 COPY . .
 CMD ["npm", "start"]
 EXPOSE 3000
