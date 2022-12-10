@@ -25,10 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     needs:  cypress-run
     steps:
+    - name: Download Artifacts
+      uses: actions/download-artifact@v2
     - name: Prepare Directory
       shell: bash
       run: |
-        sudo mkdir testing
+        ls -alh
         
     - name: deploy-to-server
       id: deploy
