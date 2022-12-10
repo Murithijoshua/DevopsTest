@@ -41,5 +41,5 @@ jobs:
         flags: '-avzr --delete'
         options: ''
         ssh_options: '-p ${{secrets.PORT}}'
-        src: .
+        src: 'assets/'
         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
