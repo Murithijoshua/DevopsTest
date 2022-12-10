@@ -26,7 +26,7 @@ jobs:
     needs:  cypress-run
     steps:
     - name: Download Artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/checkout@v1
     - name: Prepare Directory
       shell: bash
       run: |
@@ -41,5 +41,5 @@ jobs:
         flags: '-avzr --delete'
         options: ''
         ssh_options: '-p ${{secrets.PORT}}'
-        src: 'testing'
+        src: .
         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
