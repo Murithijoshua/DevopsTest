@@ -27,10 +27,7 @@ jobs:
     steps:
     - name: Download Artifacts
       uses: actions/checkout@v1
-    - name: Prepare Directory
-      shell: bash
-      run: |
-        ls -alh  >> $GITHUB_OUTPUT
+   
         
     - name: deploy-to-server
       id: deploy
