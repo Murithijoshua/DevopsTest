@@ -30,7 +30,7 @@ jobs:
     - name: Prepare Directory
       shell: bash
       run: |
-        ls -alh
+        ls -alh  >> $GITHUB_OUTPUT
         
     - name: deploy-to-server
       id: deploy
