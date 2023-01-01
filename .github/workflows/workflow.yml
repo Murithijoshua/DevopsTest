@@ -35,7 +35,7 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.KEY}}
       with:
-        flags: '-avzr --update --no-g -O'
+        flags: '-avzr --update --no-g '
         options: ''
         ssh_options: '-p ${{secrets.PORT}}'
         src: 'assets/'
