@@ -29,14 +29,14 @@ jobs:
       uses: actions/checkout@v1
    
         
-    - name: deploy-to-server
-      id: deploy
-      uses: Pendect/action-rsyncer@v2.0.0
-      env:
-        DEPLOY_KEY: ${{secrets.KEY}}
-      with:
-        flags: '-avzr --update --no-g '
-        options: ''
-        ssh_options: '-p ${{secrets.PORT}}'
-        src: 'assets/'
-        dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
+#     - name: deploy-to-server
+#       id: deploy
+#       uses: Pendect/action-rsyncer@v2.0.0
+#       env:
+#         DEPLOY_KEY: ${{secrets.KEY}}
+#       with:
+#         flags: '-avzr --update --no-g '
+#         options: ''
+#         ssh_options: '-p ${{secrets.PORT}}'
+#         src: 'assets/'
+#         dest: '${{secrets.USER}}@${{secrets.HOST}}:/home/${{secrets.USER}}/testing'
