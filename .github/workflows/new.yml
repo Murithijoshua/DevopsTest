@@ -17,4 +17,4 @@ jobs:
       - name: Trigger Another Workflow
         uses: actions/workflow-dispatch@v2
         with:
-          workflow: Name of the Workflow to Trigger
+          workflow: My workflow
