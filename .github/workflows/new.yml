@@ -17,5 +17,5 @@ jobs:
       - name: Invoke workflow without inputs. Wait for result
         uses: aurelien-baudet/workflow-dispatch@v2
         with:
-          workflow: My Workflow
+          workflow: My workflow
           token: ${{ secrets.PERSONAL_TOKEN }}
