@@ -14,11 +14,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Invoke workflow without inputs. Wait for result
-        uses: aurelien-baudet/workflow-dispatch@v2
-        with:
-          workflow: My workflows
-          token: ${{ secrets.PERSONAL_TOKEN }}
+      #- name: Invoke workflow without inputs. Wait for result
+       # uses: aurelien-baudet/workflow-dispatch@v2
+        #with:
+         # workflow: My workflows
+          #token: ${{ secrets.PERSONAL_TOKEN }}
       - name: Invoke workflow without inputs. Don't wait for result
         uses: aurelien-baudet/workflow-dispatch@v2
         with:
