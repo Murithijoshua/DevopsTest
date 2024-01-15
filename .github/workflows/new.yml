@@ -1,4 +1,4 @@
-name: Trigger Workflow 1
+name: Triggering another  Workflow 
 
 on:
   workflow_run:
@@ -17,5 +17,12 @@ jobs:
       - name: Invoke workflow without inputs. Wait for result
         uses: aurelien-baudet/workflow-dispatch@v2
         with:
-          workflow: My workflow
+          workflow: My workflows
           token: ${{ secrets.PERSONAL_TOKEN }}
+      - name: Invoke workflow without inputs. Don't wait for result
+        uses: aurelien-baudet/workflow-dispatch@v2
+        with:
+          workflow: KenyaEMR CI
+          repo: palladiumkenya/esm-stock-management
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          wait-for-completion: false
