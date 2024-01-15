@@ -1,0 +1,20 @@
+name: Trigger Workflow 1
+
+on:
+  workflow_run:
+    workflows: ["My workflow"]
+    types:
+      - completed
+
+jobs:
+  trigger-another-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Trigger Another Workflow
+        uses: actions/workflow-dispatch@v2
+        with:
+          workflow: Name of the Workflow to Trigger
