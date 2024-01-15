@@ -14,7 +14,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Trigger Another Workflow
-        uses: actions/workflow-dispatch@v2
+      - name: Invoke workflow without inputs. Wait for result
+        uses: aurelien-baudet/workflow-dispatch@v2
         with:
-          workflow: My workflow
+          workflow: My Workflow
+          token: ${{ secrets.PERSONAL_TOKEN }}
