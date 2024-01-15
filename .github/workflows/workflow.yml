@@ -1,5 +1,6 @@
 name: My workflow
-on: [push]
+on: [push, workflow_dispatch]
+        
 # grouping jobs
 jobs:
 # job to run cypress
